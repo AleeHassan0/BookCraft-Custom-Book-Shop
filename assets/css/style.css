@@ -1,0 +1,432 @@
+
+/* =================================
+   1. GLOBAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #faf8f4;
+    color: #29251f;
+}
+
+
+/* =================================
+   2. NAVIGATION BAR
+================================= */
+
+header {
+    background-color: #ffffff;
+    padding: 22px 8%;
+    border-bottom: 1px solid #eee9e1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    color: #6b4226;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #38332d;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a16c42;
+}
+
+
+/* =================================
+   3. HERO SECTION
+================================= */
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background: linear-gradient(
+        120deg,
+        #f4eee4,
+        #e8d9c5
+    );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.subtitle {
+    color: #956c47;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+    color: #30271f;
+}
+
+.hero h1 span {
+    color: #956c47;
+}
+
+.hero-description {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #6c6258;
+    max-width: 510px;
+    margin-bottom: 35px;
+}
+
+
+/* =================================
+   4. HERO BUTTON
+================================= */
+
+.hero-button {
+    display: inline-block;
+    background-color: #6b4226;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #432a19;
+}
+
+
+/* =================================
+   5. FOOTER
+================================= */
+
+.footer {
+    background-color: #29251f;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 15px;
+    line-height: 2;
+    font-size: 14px;
+}
+
+
+/* =================================
+   6. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 65px 7%;
+        min-height: 480px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+}
+
+
+
+/* =================================
+   SHOP PAGE
+================================= */
+
+.shop-page {
+    padding: 70px 8%;
+}
+
+.shop-heading {
+    text-align: center;
+    padding: 40px 0 65px;
+}
+
+.shop-heading h1 {
+    font-size: 42px;
+    margin: 20px 0;
+}
+
+.shop-heading h1 span {
+    color: #956c47;
+}
+
+.shop-heading > p:last-child {
+    color: #777;
+    line-height: 1.7;
+}
+
+.product-section h2 {
+    font-size: 28px;
+    margin-bottom: 35px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #eee9e1;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-cover {
+    height: 320px;
+    margin: 25px auto;
+    width: 190px;
+    border-radius: 3px 9px 9px 3px;
+    box-shadow: 7px 8px 15px #0003;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-left: 7px solid #0003;
+}
+
+.book-cover h3 {
+    font-size: 26px;
+    margin: 20px 0;
+}
+
+.book-cover span {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.book-cover small {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.cover-one {
+    background: linear-gradient(145deg, #75513d, #34251d);
+}
+
+.cover-two {
+    background: linear-gradient(145deg, #60765c, #263c2b);
+}
+
+.cover-three {
+    background: linear-gradient(145deg, #9b7951, #59402c);
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 13px;
+    color: #888;
+}
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.product-bottom strong {
+    font-size: 19px;
+    color: #6b4226;
+}
+
+.add-button {
+    background: #6b4226;
+    color: white;
+    border: none;
+    padding: 11px 17px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background: #432a19;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-heading h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* =================================
+   PRODUCT DETAILS PAGE
+================================= */
+
+.product-detail-page {
+    padding: 80px 8%;
+    min-height: 600px;
+}
+
+.product-detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.product-preview {
+    background: #f0e9df;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.detail-book-cover {
+    width: 230px;
+    height: 360px;
+    margin: 0;
+}
+
+.product-details h1 {
+    font-size: 38px;
+    margin: 20px 0;
+}
+
+.detail-description {
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.detail-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #6b4226;
+    margin-bottom: 30px;
+}
+
+.customization-placeholder {
+    background: white;
+    border: 1px solid #e8e0d6;
+    padding: 25px;
+    border-radius: 6px;
+    line-height: 2;
+}
+
+.customization-placeholder p {
+    color: #777;
+    font-size: 14px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 30px;
+    color: #6b4226;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+
+    .product-detail-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .product-details h1 {
+        font-size: 30px;
+    }
+
+}
+
+
+
+/* BOOK CUSTOMIZATION OPTIONS */
+
+.custom-option {
+    margin-top: 20px;
+}
+
+.custom-option label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.custom-option select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ded6cc;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 15px;
+    color: #302820;
+    cursor: pointer;
+}
+
+.custom-option select:focus {
+    outline: 2px solid #9a704e;
+    border-color: #9a704e;
+}
