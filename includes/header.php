@@ -23,11 +23,7 @@
                 </a>
             </li>
 
-            <li>
-                <a href="<?= BASE_URL ?>pages/favorites.php">
-                    Favourites
-                </a>
-            </li>
+            
 
             <li>
 

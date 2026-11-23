@@ -73,9 +73,9 @@ foreach ($optionTypes as $type) {
 
     $option = $stmt->fetch();
 
-    if (!$option) {
-        exit('Invalid customization option.');
-    }
+   if (!$option || $option['option_type'] !== $type) {
+    exit('Invalid customization option.');
+}
 
     // Store selected option
     $selectedOptions[$type] = [

@@ -101,38 +101,25 @@ foreach ($cart as $item) {
 
                             <!-- Customization Details -->
 
-                            <div class="cart-options">
+                         <div class="cart-options">
 
-                                <?php foreach (
-                                    $item['options'] as $option
-                                ): ?>
+    <?php foreach ($item['options'] as $type => $option): ?>
 
-                                    <p>
+        <p>
 
-                                        <strong>
-                                            <?= htmlspecialchars(
-                                                ucfirst(
-                                                    str_replace(
-                                                        '_',
-                                                        ' ',
-                                                        array_search(
-                                                            $option,
-                                                            $item['options']
-                                                        ) ?: ''
-                                                    )
-                                                )
-                                            ?>:
-                                        </strong>
+            <strong>
+                <?= htmlspecialchars(
+                    ucfirst(str_replace('_', ' ', $type))
+                ) ?>:
+            </strong>
 
-                                        <?= htmlspecialchars(
-                                            $option['name']
-                                        ) ?>
+            <?= htmlspecialchars($option['name']) ?>
 
-                                    </p>
+        </p>
 
-                                <?php endforeach; ?>
+    <?php endforeach; ?>
 
-                            </div>
+</div>
 
                             <!-- Quantity Form -->
 
